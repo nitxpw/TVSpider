@@ -1,4 +1,5 @@
 import {__jsEvalReturn} from './tiantian.js';
+
 import * as Utils from "../lib/utils.js";
 
 
@@ -64,6 +65,7 @@ async function test() {
     });
 
 
+
     let classes = JSON.parse(await spider.home(true));
     console.debug(JSON.stringify(classes))
 
@@ -75,51 +77,14 @@ async function test() {
     let detail1 = JSON.parse(await spider.detail("54141"))
     await testPlay(detail1)
 
-    //测试分类
+    // 测试分类
     let catePage = JSON.parse(await spider.category("1", "2", undefined,  {"extend":"动作"}));
     console.debug(JSON.stringify(catePage));
+
 
     // 测试搜索
     let search_page = JSON.parse(await spider.search("万相之王",false,1))
     console.debug(JSON.stringify(search_page))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
